@@ -44,4 +44,4 @@ def generate_script(subject, video_length, creativity, api_key):
 
     return search_result, title, script
 
-print(generate_script("sora模型", 1, 0.7, os.getenv("OPENAI_API_KEY")))
+#print(generate_script("sora模型", 1, 0.7, os.getenv("OPENAI_API_KEY")))
