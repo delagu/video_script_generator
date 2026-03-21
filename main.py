@@ -19,6 +19,9 @@ if submit and not openai_api_key:
 if submit and not subject:
     st.info("请输入视频的主题")
     st.stop()
+if submit and video_length <= 0:
+    st.info("视频长度需要大于或等于0.1")
+    st.stop()
 if submit:
     with st.spinner("AI正在思考中，请稍等..."):
         search_result, title, script = generate_script(subject, video_length, creativity, openai_api_key)
